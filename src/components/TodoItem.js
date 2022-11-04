@@ -14,7 +14,6 @@ class TodoItem extends React.Component {
   }
 
   handleEditing = () => {
-    console.log('edit mode activated');
     this.setState({
       editing: true,
     });
@@ -59,8 +58,7 @@ class TodoItem extends React.Component {
           className={styles.textInput}
           style={editMode}
           value={todo.title}
-          onChange={(e) => {
-            console.log(e.target.value, todo.id);
+          onChange={() => {
           }}
         />
       </li>
